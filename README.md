@@ -7,7 +7,7 @@ It provides CRUD operations and maintains a catalog of all DataFrames.
 
 ```bash
 pip install floorer
-
+```
 
 ## Usage
 ```python
@@ -50,3 +50,4 @@ floorer.delete_parquet('products')
 
 # Get the catalog
 catalog_df = floorer.get_catalog()
+```
