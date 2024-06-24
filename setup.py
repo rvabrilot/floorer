@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="floorer",
-    version="0.1.0",
+    version="0.1.4",
     author="Rodrigo Vera",
     author_email="rvabrilot@gmail.com",
     description="A small library to manage pandas DataFrames in Parquet files using PyArrow.",
