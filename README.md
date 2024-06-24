@@ -22,17 +22,17 @@ df1 = pd.DataFrame({
     'name': ['Alice', 'Bob'],
     'age': [25, 30]
 })
-df1.name = 'people'
+df1_name = 'people'
 
 df2 = pd.DataFrame({
     'product': ['A', 'B'],
     'price': [100, 200]
 })
-df2.name = 'products'
+df2_name = 'products'
 
 # Create Parquet files
-floorer.create_parquet(df1)
-floorer.create_parquet(df2)
+floorer.create_parquet(df1, df1_name)
+floorer.create_parquet(df2, df2_name)
 
 # Read a Parquet file
 read_df = floorer.read_parquet('people')
@@ -42,8 +42,8 @@ df1_updated = pd.DataFrame({
     'name': ['Alice', 'Bob', 'Charlie'],
     'age': [25, 30, 35]
 })
-df1_updated.name = 'people'
-floorer.update_parquet(df1_updated)
+df1_updated_name = 'people'
+floorer.update_parquet(df1_updated, df1_updated_name)
 
 # Delete a Parquet file
 floorer.delete_parquet('products')
