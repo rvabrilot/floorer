@@ -33,6 +33,11 @@ class Floorer:
         elif operation == 'update':
             if name in self.catalog:
                 self.catalog[name]['last_updated'] = now.isoformat()
+            else:
+                self.catalog[name] = {
+                'created': now.isoformat(),
+                'last_updated': now.isoformat()
+            }
         elif operation == 'delete':
             if name in self.catalog:
                 del self.catalog[name]
